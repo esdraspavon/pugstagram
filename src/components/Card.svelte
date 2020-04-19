@@ -1,5 +1,12 @@
 <script>
   import Comments from './Comments.svelte';
+
+  export let username;
+  export let location;
+  export let photo;
+  export let postComment;
+  export let comments;
+  export let avatar;
 </script>
 
 
@@ -120,10 +127,10 @@
   <div class="Card-container">
     <div class="Card-Header">
       <div class="Card-user">
-        <img src="https://arepa.s3.amazonaws.com/elmo002.jpg" alt="">
+        <img src={avatar} alt={username}>
         <h2>
-        Elmo.pug
-        <span>Corrientes, Argentina</span>
+        {username}
+        <span>{location}}</span>
         </h2>
       </div>
       <div class="Card-settings">
@@ -132,7 +139,7 @@
     </div>
     <div class="Card-photo">
       <figure>
-        <img src="https://arepa.s3.amazonaws.com/elmo002.jpg" alt="">
+        <img src={photo} alt={username}>
       </figure>
     </div>
     <div class="Card-icons">
@@ -145,9 +152,9 @@
       </div>
     </div>
     <div class="Card-description">
-      <h3>elmo.pug</h3>
-      <span>Hola!</span>
+      <h3>{username}</h3>
+      <span>{postComment}</span>
     </div>
-    <Comments />
+    <Comments {...comments}/>
   </div>
 </div>

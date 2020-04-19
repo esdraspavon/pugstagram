@@ -1,3 +1,8 @@
+<script>
+  export let nickname;
+  export let name;
+</script>
+
 <style>
   .Profile-content {
     display: flex;
@@ -29,8 +34,8 @@
       <img src="https://avatars2.githubusercontent.com/u/18061371?s=460&u=15514a1b80843453d3e66c6a28c7ec672ae6b5a2&v=4" alt="" />
     </div>
     <div class="Profile-info">
-      <h2>esdraspavon</h2>
-      <span>Esdras Pavon</span>
+      <h2>{nickname}</h2>
+      <span>{name}</span>
     </div>
   </div>
 </div>
