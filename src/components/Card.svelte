@@ -130,7 +130,7 @@
         <img src={avatar} alt={username}>
         <h2>
         {username}
-        <span>{location}}</span>
+        <span>{location}</span>
         </h2>
       </div>
       <div class="Card-settings">
